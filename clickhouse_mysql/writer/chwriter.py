@@ -80,6 +80,7 @@ class CHWriter(Writer):
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
+        logging.debug('insert: %s ',rows[0])
 
         # determine target schema.table
 
