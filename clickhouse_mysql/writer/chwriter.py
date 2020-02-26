@@ -104,6 +104,7 @@ class CHWriter(Writer):
                 ', '.join(map(lambda column: '`%s`' % column, rows[0].keys()))
             )
             self.client.execute(sql, rows)
+            logger.debug("insert {}".format(rows[0]))
         except Exception as ex:
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
