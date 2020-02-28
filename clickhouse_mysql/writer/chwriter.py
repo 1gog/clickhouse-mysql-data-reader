@@ -80,7 +80,7 @@ class CHWriter(Writer):
 					
 					### convert datetime if none to to NULL
 					if key == 'expire':
-						logger.debug('row is expire') 
+						logging.debug('row is expire') 
 					if key == 'expire' and row[key] == None:
 						row[key] = 'NULL'
                 rows.append(row)
