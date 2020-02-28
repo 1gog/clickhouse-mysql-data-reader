@@ -105,7 +105,7 @@ class CHWriter(Writer):
 
         sql = ''
         try:
-            sql = 'INSERT INTO `{0}`.`{1}` ({2}) VALUES'.format(
+            sql = '√ INSERT INTO `{0}`.`{1}` ({2}) VALUES'.format(
                 schema,
                 table,
                 ', '.join(map(lambda column: '`%s`' % column, rows[0].keys()))
