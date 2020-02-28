@@ -78,7 +78,9 @@ class CHWriter(Writer):
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
 					
-					### convert datetime if none to to NULL 
+					### convert datetime if none to to NULL
+					if key == 'expire':
+						logger.debug('row is expire') 
 					if key == 'expire' and row[key] == None:
 						row[key] = 'NULL'
                 rows.append(row)
