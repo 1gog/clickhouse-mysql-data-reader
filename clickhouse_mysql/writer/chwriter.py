@@ -77,6 +77,8 @@ class CHWriter(Writer):
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
+					### convert none to NULL 
+			        print(row)
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
