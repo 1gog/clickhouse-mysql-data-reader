@@ -78,7 +78,7 @@ class CHWriter(Writer):
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
 					### convert none to NULL 
-			        print(row)
+			        print("row = ", row)
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
