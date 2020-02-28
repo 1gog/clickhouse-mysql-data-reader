@@ -77,8 +77,9 @@ class CHWriter(Writer):
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
+					
 					### convert datetime if none to to NULL 
-					if row[key] == 'expire' and row[key] == None:
+					if key == 'expire' and row[key] == None:
 						row[key] = 'NULL'
                 rows.append(row)
 
