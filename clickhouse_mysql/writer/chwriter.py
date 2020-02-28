@@ -63,7 +63,7 @@ class CHWriter(Writer):
         logging.debug('class:%s insert %d event(s)', __class__, len(events))
 
         # verify and converts events and consolidate converted rows from all events into one batch
-
+		logging.debug('test logging')
         rows = []
         event_converted = None
         for event in events:
