@@ -81,7 +81,7 @@ class CHWriter(Writer):
                     if type(row[key]) == datetime:
                         row[key] = str(row[key])
 					if key == 'expire':
-						print('expire: ',row[key])
+						print('expire: {}'.format(row[key]))
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
