@@ -102,7 +102,7 @@ class CHWriter(Writer):
         logging.debug("schema={} table={} self.dst_schema={} self.dst_table={}".format(schema, table, self.dst_schema, self.dst_table))
 
         # and INSERT converted rows
-
+		
         sql = ''
         try:
             sql = '√ INSERT INTO `{0}`.`{1}` ({2}) VALUES'.format(
@@ -116,7 +116,7 @@ class CHWriter(Writer):
         except Exception as ex:
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
-            logging.critical('!!!sql={}, raw={}'.format(sql, rows[0]))
+            logging.debug('!!!sql={}, raw={}'.format(sql, rows[0]))
             sys.exit(0)
 
         # all DONE
