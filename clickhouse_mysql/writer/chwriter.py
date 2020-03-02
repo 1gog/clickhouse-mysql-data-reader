@@ -80,8 +80,8 @@ class CHWriter(Writer):
                         row[key] = str(row[key])
                     if type(row[key]) == datetime:
                         row[key] = str(row[key])
-					if key == 'expire':
-						print('expire: {}'.format(row[key]))
+                    if key == 'expire':
+                        print('expire: {}'.format(row[key]))
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
@@ -108,7 +108,6 @@ class CHWriter(Writer):
                 table,
                 ', '.join(map(lambda column: '`%s`' % column, rows[0].keys()))
             )
-            logging.debug('test 5',rows)
             self.client.execute(sql, rows)
         except Exception as ex:
             logging.critical('QUERY FAILED')
