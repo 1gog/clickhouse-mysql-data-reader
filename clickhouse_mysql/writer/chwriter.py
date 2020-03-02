@@ -79,7 +79,7 @@ class CHWriter(Writer):
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
                     if key == 'expire':
-                        print('expire: {}'.format(row[key]))
+                        print('expire: {} {}'.format(row['id'], row[key]))
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
@@ -111,6 +111,7 @@ class CHWriter(Writer):
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
             logging.critical('sql={}'.format(sql))
+            print("error: {}".format(rows))
             sys.exit(0)
 
         # all DONE
