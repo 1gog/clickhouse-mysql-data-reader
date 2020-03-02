@@ -83,6 +83,7 @@ class CHWriter(Writer):
                     if type(row[key]) == None:
                         continue
                 rows.append(row)
+                print(rows)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
         #logging.debug('insert: %s ',rows[0])
