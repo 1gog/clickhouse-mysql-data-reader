@@ -78,8 +78,8 @@ class CHWriter(Writer):
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
-                    if type(row[key]) == datetime:
-                        row[key] = str(row[key])
+                    #if type(row[key]) == datetime:
+                    #    row[key] = str(row[key])
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
