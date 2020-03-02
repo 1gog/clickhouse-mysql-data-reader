@@ -5,6 +5,7 @@ import logging
 import sys
 
 from decimal import Decimal
+from datetime import datetime 
 
 from clickhouse_mysql.dbclient.chclient import CHClient
 
@@ -76,6 +77,8 @@ class CHWriter(Writer):
                 for key in row.keys():
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
+                        row[key] = str(row[key])
+                    if type(row[key]) == datetime:
                         row[key] = str(row[key])
                 rows.append(row)
 
