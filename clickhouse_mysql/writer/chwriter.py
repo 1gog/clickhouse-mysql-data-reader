@@ -70,11 +70,14 @@ class CHWriter(Writer):
                 logging.warning('Event verification failed. Skip one event. Event: %s Class: %s', event.meta(), __class__)
                 continue # for event
 
+            # TODO try convert datetime to string
             event_converted = self.convert(event)
             for row in event_converted:
                 for key in row.keys():
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
+                        row[key] = str(row[key])
+                    if type(row[key]) == DateTime:
                         row[key] = str(row[key])
                 rows.append(row)
 
