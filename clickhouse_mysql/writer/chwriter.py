@@ -78,8 +78,6 @@ class CHWriter(Writer):
                     # we need to convert Decimal value to str value for suitable for table structure
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
-                    if type(row[key]) == datetime:
-                        row[key] = str(row[key])
                     if key == 'expire':
                         print('expire: {}'.format(row[key]))
                 rows.append(row)
