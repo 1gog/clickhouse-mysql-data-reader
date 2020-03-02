@@ -6,7 +6,7 @@ import sys
 
 from decimal import Decimal
 from datetime import datetime
-from type import NoneType
+
 from clickhouse_mysql.dbclient.chclient import CHClient
 
 from clickhouse_mysql.writer.writer import Writer
@@ -80,8 +80,8 @@ class CHWriter(Writer):
                         row[key] = str(row[key])
                     if type(row[key]) == datetime:
                         row[key] = str(row[key])
-                    if type(row[key]) == None:
-                        continue
+                    # if type(row[key]) == None:
+                    #     continue
                 rows.append(row)
                 print(rows)
 
