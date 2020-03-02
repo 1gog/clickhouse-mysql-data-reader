@@ -35,7 +35,7 @@ class CHWriter(Writer):
             dst_schema += "_all"
         if dst_distribute and dst_table is not None:
             dst_table += "_all"
-        logging.info("CHWriter() connection_settings={} dst_schema={} dst_table={} dst_distribute={}".format(
+        logging.info("!!!CHWriter() connection_settings={} dst_schema={} dst_table={} dst_distribute={}".format(
             connection_settings, dst_schema, dst_table, dst_distribute))
         self.client = CHClient(connection_settings)
         self.dst_schema = dst_schema
