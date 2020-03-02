@@ -80,6 +80,8 @@ class CHWriter(Writer):
                         row[key] = str(row[key])
                     if type(row[key]) == datetime:
                         row[key] = str(row[key])
+                    if type(row[key]) == None:
+                        row[key] = 'NULL'
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
