@@ -83,7 +83,7 @@ class CHWriter(Writer):
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
-        logging.debug('insert: %s ',rows[0])
+        #logging.debug('insert: %s ',rows[0])
 
         # determine target schema.table
 
@@ -113,7 +113,6 @@ class CHWriter(Writer):
         except Exception as ex:
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
-            logging.debug('!!!sql={}, raw={}'.format(sql, rows))
             sys.exit(0)
 
         # all DONE
