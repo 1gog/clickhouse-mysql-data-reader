@@ -79,7 +79,7 @@ class CHWriter(Writer):
                     if type(row[key]) == Decimal:
                         row[key] = str(row[key])
                     if key == 'expire':
-                        print('expire: {} {}'.format(row['id'], row[key]))
+                        print('8: expire: {} {}'.format(row['id'], row[key]))
                 rows.append(row)
 
         logging.debug('class:%s insert %d row(s)', __class__, len(rows))
