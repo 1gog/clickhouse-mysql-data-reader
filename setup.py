@@ -7,7 +7,7 @@ setup(
     name="clickhouse-mysql",
 
     # version should comply with PEP440
-    version='0.0.1',
+    version='0.0.1-debug-clickhouse',
 
     description='MySQL to ClickHouse data migrator',
     long_description='MySQL to ClickHouse data migrator',
