@@ -80,7 +80,7 @@ class CHWriter(Writer):
                         row[key] = str(row[key])
                     if type(row[key]) == datetime:
                         row[key] = str(row[key])
-                    print("row key : {}".format(row[key]))
+                    print("row key : {}".format(key))
                     print('insert rows: {}'.format(row[key]))
                 print("new row {}".format(row))
                 rows.append(row)
