@@ -5,7 +5,7 @@ import logging
 import sys
 
 from decimal import Decimal
-from datetime import datetime 
+from datetime import datetime, date 
 
 from clickhouse_mysql.dbclient.chclient import CHClient
 
